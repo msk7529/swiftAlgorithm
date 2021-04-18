@@ -23,6 +23,7 @@ public struct Queue<T> {
         array.append(element)
     }
     
+    @discardableResult
     public mutating func dequeue() -> T? {
         // 일반적인 queue의 dequeue 연산은 O(N).
         // 매 dequeue 수행시 마다 원소들을 앞으로 한 칸씩 앞으로 이동시키지 말고, 앞에 여백을 주는 식으로 최적화
