@@ -51,3 +51,54 @@ for num in 1...N {
 }
 print(result)
 */
+
+/*
+
+ import Foundation
+
+ var N: Int = 0
+ var M: Int = 0
+ var u: Int = 0
+ var v: Int = 0
+ var graph: [[Int]] = []
+ var visited: [Bool] = []
+ var result: Int = 0
+
+ func input() {
+     let file: FileIO = FileIO()
+
+     N = file.readInt()
+     M = file.readInt()
+     
+     graph = Array(repeating: [], count: N + 1)
+     visited = Array(repeating: false, count: N + 1)
+     
+     for _ in 0..<M {
+         u = file.readInt()
+         v = file.readInt()
+         graph[u].append(v)
+         graph[v].append(u)
+     }
+ }
+
+ func dfs(num: Int) {
+     visited[num] = true
+     
+     for next in graph[num] {
+         if !visited[next] {
+             dfs(num: next)
+         }
+     }
+ }
+
+ input()
+ for num in 1...N {
+     if !visited[num] {
+         result += 1
+         dfs(num: num)
+     }
+ }
+ print(result)
+
+ 
+ */

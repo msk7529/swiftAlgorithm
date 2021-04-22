@@ -5,7 +5,7 @@
 //  Created by MinSeop on 2021/04/23.
 //
 
-import Foundation
+import Foundation   // import 안하면 백준 제출시 컴파일에러 발생
 
 final class FileIO {
     private var buffer:[UInt8]
