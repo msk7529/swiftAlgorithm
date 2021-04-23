@@ -20,7 +20,7 @@ func dijkstra(src: Int, numOfVertex: Int) -> [Int] {
     // 시작노드로부터 모든 노드까지의 최단거리를 계산하여 배열형태로 반환한다.
     var dist: [Int] = Array(repeating: Int.max, count: numOfVertex + 1)
     var pq: PriorityQueue<Node> = .init()
-    var graph: [[(Int, Int)]] = []     // 빌드성공용 임시배열. 입력값 받을때 구성해야함.
+    let graph: [[(Int, Int)]] = []     // 빌드성공용 임시배열. 입력값 받을때 구성해야함.
     
     pq.enqueue(Node(node: src, cost: 0))
     dist[src] = 0
