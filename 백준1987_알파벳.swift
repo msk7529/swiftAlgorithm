@@ -4,7 +4,7 @@
 //
 //  Created by MinSeop on 2021/04/27.
 //
-
+/*
 var R: Int = 0
 var C: Int = 0
 
@@ -52,5 +52,5 @@ func isValid(_ y: Int, _ x: Int) -> Bool {
 
 dfs(0, 0)
 print(result)
-
+*/
 
