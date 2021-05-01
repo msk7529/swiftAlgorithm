@@ -26,11 +26,12 @@ struct UnionFind {
     }
     
     // rank를 이용한 union 최적화
-    mutating func union(_ nodeU: Int, _ nodeV: Int) {
+    @discardableResult
+    mutating func union(_ nodeU: Int, _ nodeV: Int) -> Bool {
         let rootU: Int = find(nodeU)
         let rootV: Int = find(nodeV)    // 각각의 루트노드를 찾고,
         
-        if rootU == rootV { return }    // 두 노드의 root가 같으면 합칠 필요가 없다.
+        if rootU == rootV { return false }    // 두 노드의 root가 같으면 합칠 필요가 없다.
         
         // 항상 높이가 더 낮은 트리를 높이가 높은 트리 밑에 넣는다.
         if rank[rootU] > rank[rootV] {
@@ -43,5 +44,6 @@ struct UnionFind {
                 rank[rootV] += 1
             }
         }
+        return true
     }
 }
