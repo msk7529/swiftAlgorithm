@@ -1,11 +1,13 @@
 //
-//  Dijkstra.swift
+//  main.swift
 //  Algorithm
 //
-//  Created by kakao on 2021/04/23.
+//  Created by MinSeop on 2021/05/04.
 //
+/*
+import Foundation
 
-struct Node_API: Comparable {
+struct Node: Comparable {
     // 우선순위큐 안에 들어갈 원소
     static func < (lhs: Node, rhs: Node) -> Bool {
         lhs.cost < rhs.cost
@@ -16,11 +18,34 @@ struct Node_API: Comparable {
     var cost: Int   // 시작점부터 현재노드까지 걸린 총 비용
 }
 
-func dijkstra_API(src: Int, numOfVertex: Int) -> [Int] {
+let file: FileIO = .init()
+var N: Int = file.readInt()
+var M: Int = file.readInt()
+var graph: [[(Int, Int)]] = []
+var start: Int = 0
+var finish: Int = 0
+
+func input() {
+    graph = Array(repeating: [], count: N + 1)
+    
+    for _ in 0..<M {
+        let u = file.readInt()
+        let v = file.readInt()
+        let cost = file.readInt()
+        graph[u].append((v, cost))
+    }
+    
+    start = file.readInt()
+    finish = file.readInt()
+    
+    let dist: [Int] = dijkstra(src: start, numOfVertex: N)
+    print(dist[finish])
+}
+
+func dijkstra(src: Int, numOfVertex: Int) -> [Int] {
     // 시작노드로부터 모든 노드까지의 최단거리를 계산하여 배열형태로 반환한다.
     var dist: [Int] = Array(repeating: Int.max, count: numOfVertex + 1)
     var pq: PriorityQueue<Node> = .init()
-    let graph: [[(Int, Int)]] = []     // 빌드성공용 임시배열. 입력값 받을때 구성해야함.
     
     pq.enqueue(Node(node: src, cost: 0))
     dist[src] = 0
@@ -41,4 +66,6 @@ func dijkstra_API(src: Int, numOfVertex: Int) -> [Int] {
     
     return dist
 }
- 
+
+input()
+*/
