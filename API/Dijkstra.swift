@@ -7,7 +7,7 @@
 
 struct Node_API: Comparable {
     // 우선순위큐 안에 들어갈 원소
-    static func < (lhs: Node, rhs: Node) -> Bool {
+    static func < (lhs: Node_API, rhs: Node_API) -> Bool {
         lhs.cost < rhs.cost
 
     }
@@ -19,10 +19,10 @@ struct Node_API: Comparable {
 func dijkstra_API(src: Int, numOfVertex: Int) -> [Int] {
     // 시작노드로부터 모든 노드까지의 최단거리를 계산하여 배열형태로 반환한다.
     var dist: [Int] = Array(repeating: Int.max, count: numOfVertex + 1)
-    var pq: PriorityQueue<Node> = .init()
+    var pq: PriorityQueue<Node_API> = .init()
     let graph: [[(Int, Int)]] = []     // 빌드성공용 임시배열. 입력값 받을때 구성해야함.
     
-    pq.enqueue(Node(node: src, cost: 0))
+    pq.enqueue(Node_API(node: src, cost: 0))
     dist[src] = 0
     
     while !pq.isEmpty {
@@ -34,7 +34,7 @@ func dijkstra_API(src: Int, numOfVertex: Int) -> [Int] {
             // graph: (Int, Int). 첫번째는 연결된 노드번호, 두번째는 해당노드와의 거리
             if now.cost + next.1 < dist[next.0] {
                 dist[next.0] = now.cost + next.1
-                pq.enqueue(Node(node: next.0, cost: now.cost + next.1))
+                pq.enqueue(Node_API(node: next.0, cost: now.cost + next.1))
             }
         }
     }
