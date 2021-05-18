@@ -4,22 +4,18 @@
 //
 //  Created by MinSeop on 2021/05/17.
 //
-let line = readLine()!.split(separator: " ")
-var A = ""
-var B = ""
+let line = readLine()!.split(separator: " ").map { String($0) }
+var A = line[0]
+var B = line[1]
 var overflow: Int = 0
 var result: String = ""
 
-if line[0].count >= line[1].count {
-    A = String(line[0].reversed())
-    B = String(line[1].reversed())
-} else {
-    A = String(line[1].reversed())
-    B = String(line[0].reversed())
+if B.count > A.count {
+    swap(&A, &B)
 }
 
-for i in 0..<B.count {
-    let sum: Int = Int(String(A[A.index(A.startIndex, offsetBy: i)]))! + Int(String(B[B.index(B.startIndex, offsetBy: i)]))! + overflow
+for _ in 0..<B.count {
+    let sum: Int = Int(String(A.removeLast()))! + Int(String(B.removeLast()))! + overflow
     if sum >= 10 {
         overflow = 1
     } else {
@@ -28,8 +24,8 @@ for i in 0..<B.count {
     result.append(String(sum % 10))
 }
 
-for i in stride(from: B.count, to: A.count, by: 1) {
-    let curr: Int = Int(String(A[A.index(A.startIndex, offsetBy: i)]))! + overflow
+for _ in stride(from: B.count, to: A.count, by: 1) {
+    let curr: Int = Int(String(A.removeLast()))! + overflow
     if curr >= 10 {
         overflow = 1
     } else {
