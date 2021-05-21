@@ -34,9 +34,10 @@ func combinations(_ n: Int, _ r: Int) -> Int {
     return permutations(n, r) / factorial(r)    // nCr == n! / ((n-r)! * r!) == nPr / k!
 }
 
-func binomialCoefficient(_ n: Int, _ r: Int) -> Int {
+func binomialCoefficient(_ n: Int, _ r: Int, mod: Int? = nil) -> Int {
     // 위의 combinations 메서드는 permutations 수행을 한 뒤에 factorial로 나누기 때문에, 분자값이 매우 큰 경우 오류가 발생할 수 있다.
     // 이 알고리즘은 DP를 사용하여 해당 문제를 개선한다. 파스칼의 삼각형에 기반하여 작성되었다.
+    // mod는 overflow를 막기위해 문제에서 값을 제한한 경우에 쓰인다.
     var bc: [[Int]] = Array(repeating: Array(repeating: 0, count: n + 1), count: n + 1)
     
     for i in 0...n {
@@ -48,6 +49,9 @@ func binomialCoefficient(_ n: Int, _ r: Int) -> Int {
         for i in 1...n {
             for j in 1..<i {
                 bc[i][j] = bc[i - 1][j - 1] + bc[i - 1][j]
+                if mod != nil {
+                    bc[i][j] %= mod!
+                }
             }
         }
     }
