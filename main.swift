@@ -2,5 +2,5 @@
 //  main.swift
 //  Algorithm
 //
-//  Created by MinSeop on 2021/06/01.
+//  Created by MinSeop on 2021/06/02.
 //
