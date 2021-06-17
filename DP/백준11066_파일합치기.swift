@@ -4,6 +4,7 @@
 //
 //  Created by MinSeop on 2021/06/18.
 //
+/*
 let T: Int = Int(readLine()!)!
 var K: Int = 0
 
@@ -35,3 +36,4 @@ for _ in 0..<T {
     }
     print(dp[1][K])
 }
+*/
