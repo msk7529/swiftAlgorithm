@@ -15,7 +15,7 @@ for _ in 0..<K {
     } else {
         arr.removeLast()
     }
-}
+} 
 
 print(arr.reduce(0,+))
 */
