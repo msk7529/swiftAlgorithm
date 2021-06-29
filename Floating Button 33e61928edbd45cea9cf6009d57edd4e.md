@@ -20,7 +20,7 @@ content mode는 비율을 유지하며 채우는 옵션 - **Aspect Fill**
 
 추가적으로 노출되는 버튼들은 +버튼의 CenterX에 동일하게 맞추고, CenterY를 기준으로 간격을 준다.
 
-![Floating%20Button%2033e61928edbd45cea9cf6009d57edd4e/Untitled%202.png](Floating%20Button%2033e61928edbd45cea9cf6009d57edd4e/Untitled%202.png)
+![Untitled%202.png](Untitled%202.png)
 
 4. 메인뷰컨의 + 버튼의 **Action Segue**의 형태로 show를 FloatingVC에 걸어주고 identifier을 ShowPopup으로 정한다.
 
