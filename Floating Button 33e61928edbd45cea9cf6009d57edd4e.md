@@ -6,7 +6,7 @@
 
 content mode는 비율을 유지하며 채우는 옵션 - **Aspect Fill**
 
-![Floating%20Button%2033e61928edbd45cea9cf6009d57edd4e/Untitled.png](Floating%20Button%2033e61928edbd45cea9cf6009d57edd4e/Untitled.png)
+![Untitled.png](Floating%20Button%2033e61928edbd45cea9cf6009d57edd4e/Untitled.png)
 
 2. StoryBoard에 UIButton 추가(+ 버튼)
 
