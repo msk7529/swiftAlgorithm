@@ -12,7 +12,7 @@ content mode는 비율을 유지하며 채우는 옵션 - **Aspect Fill**
 
 버튼은 superView가 아닌 safeArea에 맞춰준다.
 
-![Floating%20Button%2033e61928edbd45cea9cf6009d57edd4e/Untitled%201.png](Floating%20Button%2033e61928edbd45cea9cf6009d57edd4e/Untitled%201.png)
+![Untitled%201.png](Untitled%201.png)
 
 3. StoryBoard에 FloatingVC를 하나 추가하고, +버튼 눌렸을때 노출되는 버튼들을 추가해준다.
 
