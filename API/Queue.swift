@@ -4,9 +4,6 @@
 //
 //  Created by kakao on 2021/04/13.
 //
-
-import Foundation
-
 public struct Queue<T> {
     fileprivate var array: [T?] = []
     fileprivate var head: Int = 0
