@@ -92,29 +92,37 @@ for i in 0..<n {
         var result = 0
         let tmp = arr[i][j]
         
-        arr[i][j] &= ~(1 << 0)
-        visited = Array(repeating: Array(repeating: false, count: m), count: n)
-        result = dfs(i, j)
-        roomWidthMax2 = max(roomWidthMax2, result)
-        arr[i][j] = tmp
+        if arr[i][j] & (1 << 0) > 0 {
+            arr[i][j] &= ~(1 << 0)
+            visited = Array(repeating: Array(repeating: false, count: m), count: n)
+            result = dfs(i, j)
+            roomWidthMax2 = max(roomWidthMax2, result)
+            arr[i][j] = tmp
+        }
 
-        arr[i][j] &= ~(1 << 1)
-        visited = Array(repeating: Array(repeating: false, count: m), count: n)
-        result = dfs(i, j)
-        roomWidthMax2 = max(roomWidthMax2, result)
-        arr[i][j] = tmp
+        if arr[i][j] & (1 << 1) > 0 {
+            arr[i][j] &= ~(1 << 1)
+            visited = Array(repeating: Array(repeating: false, count: m), count: n)
+            result = dfs(i, j)
+            roomWidthMax2 = max(roomWidthMax2, result)
+            arr[i][j] = tmp
+        }
         
-        arr[i][j] &= ~(1 << 2)
-        visited = Array(repeating: Array(repeating: false, count: m), count: n)
-        result = dfs(i, j)
-        roomWidthMax2 = max(roomWidthMax2, result)
-        arr[i][j] = tmp
+        if arr[i][j] & (1 << 2) > 0 {
+            arr[i][j] &= ~(1 << 2)
+            visited = Array(repeating: Array(repeating: false, count: m), count: n)
+            result = dfs(i, j)
+            roomWidthMax2 = max(roomWidthMax2, result)
+            arr[i][j] = tmp
+        }
         
-        arr[i][j] &= ~(1 << 3)
-        visited = Array(repeating: Array(repeating: false, count: m), count: n)
-        result = dfs(i, j)
-        roomWidthMax2 = max(roomWidthMax2, result)
-        arr[i][j] = tmp
+        if arr[i][j] & (1 << 3) > 0 {
+            arr[i][j] &= ~(1 << 3)
+            visited = Array(repeating: Array(repeating: false, count: m), count: n)
+            result = dfs(i, j)
+            roomWidthMax2 = max(roomWidthMax2, result)
+            arr[i][j] = tmp
+        }
     }
 }
 
