@@ -19,8 +19,8 @@ var minWidth: Int = 1   // 공유기 사이의 최소간격은 1
 var maxWidth: Int = house.last! - house.first!  // 공유기 사이의 최대거리는 처음집과 마지막집 사이의 거리
 
 while maxWidth >= minWidth {
-    let mid = (minWidth + maxWidth) / 2     // 현재 탐색할 인접공유기 사이의 거리
-    var count: Int = 1
+    let mid = (minWidth + maxWidth) / 2     // 현재 탐색할 인접공유기 사이의 거리. 즉, 이번 단계에서는 mid간격으로 공유기를 설치해보자.
+    var count: Int = 1      // 공유기를 최대한으로 설치하기 위해서는 첫번째 집에 무조건 공유기를 놓는것이 유리하다.
     var prevIdx: Int = 0
     
     for i in 1..<house.count {
