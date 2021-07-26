@@ -5,6 +5,8 @@
 //  Created by MinSeop on 2021/05/28.
 //
 /*
+DP를 사용한 이 방법은 O(N^2). 이분탐색을 이용하면 O(NlogN)
+ 
 let N: Int = Int(readLine()!)!
 let arr: [Int] = readLine()!.split(separator: " ").map { Int(String($0))! }
 var dp: [Int] = Array(repeating: -1, count: N)
