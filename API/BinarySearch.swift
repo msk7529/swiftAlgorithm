@@ -47,6 +47,11 @@ public extension RandomAccessCollection where Element: Comparable {
     
     func lowerBound(value: Element) -> Int {
         // 오름차순으로 정렬된 콜렉션에서 value 이상의 값이 처음 나오는 index를 리턴
+        if self.last! < value {
+            // 배열의 모든 원소가 value보다 작으면 -1 리턴
+            return -1
+        }
+        
         var startIdx = 0
         var endIdx = self.count - 1
         
@@ -67,6 +72,11 @@ public extension RandomAccessCollection where Element: Comparable {
     
     func upperBound(value: Element) -> Int {
         // 오름차순으로 정렬된 콜렉션에서 value를 초과한 값이 처음 나오는 index를 리턴
+        if self.last! <= value {
+            // 배열의 모든 원소가 value 이하이면 -1 리턴
+            return -1
+        }
+        
         var startIdx = 0
         var endIdx = self.count - 1
         
