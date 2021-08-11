@@ -4,7 +4,9 @@
 //
 //  Created by MinSeop on 2021/08/10.
 //
-// 펜윅트리를 이용한 inversionCount 구하기. https://www.geeksforgeeks.org/count-inversions-array-set-3-using-bit/
+// Fenwick Tree(Binary Indexed Tree)를 이용한 inversionCount 구하기. https://www.geeksforgeeks.org/count-inversions-array-set-3-using-bit/
+// 펜윅트리: 이진법 인덱스 구조를 활용해 구간합 문제를 효과적으로 해결할 수 있는 자료구조. index는 1부터 시작
+// 0이 아닌 마지막 비트: 내가 저장하고 있는 값들의 개수.
 /*
 let N = Int(readLine()!)!
 var arr = readLine()!.split(separator: " ").map { Int(String($0))! }
@@ -30,25 +32,25 @@ func convert() {
     temp.sort()
     
     for i in 0..<N {
-        arr[i] = temp.lowerBound(value: arr[i]) + 1
+        arr[i] = temp.lowerBound(value: arr[i]) + 1     // 인덱스를 1부터 시작하기 위해 1을 더함.
     }
     // 이렇게 하면, [-1, -100, 1] -> [2, 1, 3]이 된다.
 }
 
 func getSum(index: Int) -> Int {
-    // index 뒤에 있는 원소들 중 자신보다 작은 원소의 개수를 구한다.
+    // index 뒤에 있는 원소들 중 자신보다 작은 원소의 개수를 구한다. 0이 아닌 마지막 비트만큼 빼가면서 이동한다.
     var sum = 0
     var index = index
     
     while index > 0 {
         sum += fenwick[index]
-        index -= (index & (-index)) //
+        index -= (index & (-index)) // index & (-index)는 0이 아닌 마지막 비트를 나타낸다. ex) 8 & -8 = 8, 7 & -7 = 1
     }
     return sum
 }
 
 func updateBit(index: Int, val: Int) {
-    // index가 존재하는 구간에 1을 더한다.
+    // index가 존재하는 구간에 val을 더한다. 0이 아닌 마지막 비트만큼 더하면서 이동한다.
     var index = index
     
     while index <= N {
