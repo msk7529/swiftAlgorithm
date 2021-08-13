@@ -47,3 +47,48 @@ let currDiff = 5 - arr[0]   // 0번 인덱스를 5로 바꾸고자 함
 update(start: 0, end: N - 1, node: 1, index: 0, diff: currDiff)
 print(getSum(start: 0, end: N - 1, left: 0, right: 4, node: 1))
 */
+
+// ----- 아래 형식이 이해하기 가장 쉬운 형태인듯. 5676번 문제.
+
+/*
+
+ func initSegmentTree(start: Int, end: Int, node: Int) {
+     if start == end {
+         segmentTree[node] = arr[start] > 0 ? 1 : arr[start] < 0 ? -1 : 0
+         return
+     }
+     
+     let mid = (start + end) / 2
+     
+     initSegmentTree(start: start, end: mid, node: node * 2)
+     initSegmentTree(start: mid + 1, end: end, node: node * 2 + 1)
+     
+     segmentTree[node] = segmentTree[node * 2] * segmentTree[node * 2 + 1]
+ }
+
+ func query(start: Int, end: Int, left: Int, right: Int, node: Int) -> Int {
+     if right < start || left > end { return 1 }     // 구간을 넘은 경우
+     if left <= start && end <= right { return segmentTree[node] }   // 영역 안에 구간이 전부 속한 경우
+     
+     let mid = (start + end) / 2     // (start + end) >> 1
+     return query(start: start, end: mid, left: left, right: right, node: node * 2) * query(start: mid + 1, end: end, left: left, right: right, node: node * 2 + 1)
+ }
+
+ func update(start: Int, end: Int, node: Int, index: Int, newValue: Int) {
+     if index < start || index > end {   // 영역 밖에 있는 경우
+         return
+     }
+     
+     if start == end {
+         segmentTree[node] = newValue
+         return
+     }
+     
+     let mid = (start + end) / 2     // (start + end) >> 1
+     update(start: start, end: mid, node: node * 2, index: index, newValue: newValue)
+     update(start: mid + 1, end: end, node: node * 2 + 1, index: index, newValue: newValue)
+     
+     segmentTree[node] = segmentTree[node * 2] * segmentTree[node * 2 + 1]
+ }
+ 
+*/
