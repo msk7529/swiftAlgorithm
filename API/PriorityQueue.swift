@@ -30,7 +30,7 @@ public struct PriorityQueue<T> {
         }
     }
 
-    mutating func dequeue() -> T? {
+    @discardableResult mutating func dequeue() -> T? {
         guard !nodes.isEmpty else {
             return nil
         }
