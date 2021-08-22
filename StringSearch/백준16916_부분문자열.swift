@@ -2,11 +2,15 @@
 //  main.swift
 //  Algorithm
 //
-//  Created by MinSeop on 2021/08/22.
+//  Created by MinSeop on 2021/08/23.
 //
-func KMP(str s: [Character], pattern p: [Character]) -> [Int] {
-    // O(n + m). 불일치가 발생하기 직전까지 같았던 부분은 다시 비교하지 않고 패턴 매칭을 진행.
-    var result: [Int] = []
+/*
+let str = Array(readLine()!)
+let pattern = Array(readLine()!)
+
+print(KMPSearch(str: str, pattern: pattern) ? "1" : "0")
+
+func KMPSearch(str s: [Character], pattern p: [Character]) -> Bool {
     let pi = getPi(pattern: p)
     var j: Int = 0
     
@@ -17,25 +21,21 @@ func KMP(str s: [Character], pattern p: [Character]) -> [Int] {
         
         if s[i] == p[j] {
             if j == p.count - 1 {
-                result.append(i - p.count + 1)
-                j = pi[j]
+                return true
             } else {
                 j += 1
             }
         }
     }
-    return result
+    return false
 }
 
 func getPi(pattern p: [Character]) -> [Int] {  // O(m)
-    // 부분일치 테이블(pi)을 만든다.
-    // pi[i]: pattern[0...i]에서 접두사와 접미사가 같을떄의 최대 길이
     var pi: [Int] = Array(repeating: 0, count: p.count)
     var j: Int = 0
     
     for i in stride(from: 1, to: p.count, by: 1) {
         while j > 0 && p[i] != p[j] {
-            // pi를 이용하여 중단단계를 뛰어넘는다.
             j = pi[j - 1]
         }
         
@@ -46,3 +46,4 @@ func getPi(pattern p: [Character]) -> [Int] {  // O(m)
     }
     return pi
 }
+*/
