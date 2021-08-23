@@ -6,7 +6,7 @@
 //
 /*
 struct Job {
-    var lanScoreDic: [String: Int] = [:]
+    var langScoreDic: [String: Int] = [:]
 }
 
 func solution(_ table: [String], _ languages: [String], _ preference: [Int]) -> String {
@@ -22,7 +22,7 @@ func solution(_ table: [String], _ languages: [String], _ preference: [Int]) -> 
         var score = 5
         
         for i in 1...5 {
-            jobs[jobToIndex].lanScoreDic[curr[i]] = score   // 직업군 > 언어별 점수를 저장한다.
+            jobs[jobToIndex].langScoreDic[curr[i]] = score   // 직업군 > 언어별 점수를 저장한다.
             score -= 1
         }
     }
@@ -34,7 +34,7 @@ func solution(_ table: [String], _ languages: [String], _ preference: [Int]) -> 
     for index in 0..<5 {
         var total = 0
         
-        for curr in jobs[index].lanScoreDic {
+        for curr in jobs[index].langScoreDic {
             total += curr.value * (langPreference[curr.key] ?? 0)
         }
         
