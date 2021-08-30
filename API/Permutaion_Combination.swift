@@ -86,7 +86,7 @@ func combinations<T>(elements: ArraySlice<T>, r: Int) -> [[T]] {
     }
     
     let head: [T] = [first]
-    let subCombinations: [[T]] = combinations(elements: elements, r: r - 1)
+    let subCombinations: [[T]] = combinations(elements: elements.dropFirst(), r: r - 1)
     var ret: [[T]] = subCombinations.map { head + $0 }
     ret += combinations(elements: elements.dropFirst(), r: r)
     
