@@ -8,6 +8,10 @@ func floyd() {
     var dist: [[Int]] = []  // 인접행렬 입력받을때 인접해있지 않으면 매우 큰 수로 정의
     let N: Int = 0
     
+    for i in 0..<N {
+        dist[i][i] = 0
+    }
+    
     for k in 0..<N {            // 중간노드
         for i in 0..<N {        // 시작노드
             for j in 0..<N {    // 도착 노드
