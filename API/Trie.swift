@@ -64,12 +64,14 @@ class Trie {
 extension Trie {
     
     // Inserts a word into the trie.  If the word is already present, there is no change.
-    func insert(word: String) {     // O(N)
+    func insert(word: String) {     // O(L)
         guard !word.isEmpty else {
             return
         }
+        
         var currentNode = root
-        for character in word.lowercased() {
+        
+        for character in word {
             if let childNode = currentNode.children[character] {
                 currentNode = childNode
             } else {
@@ -86,18 +88,15 @@ extension Trie {
         currentNode.isTerminating = true
     }
     
-    func contains(word: String, matchPrefix: Bool = false) -> Bool {     // O(N)
-        // - word: the word to check for
-        // - matchPrefix: whether the search word should match
-        
-        //   if it is only a prefix of other nodes in the trie
-        // - Returns: true if the word is present, false otherwise.
-        
+    func contains(word: String, matchPrefix: Bool = false) -> Bool {     // O(L)
+        // Trie에서 word가 존재하는지 찾는다. matchPrefix를 true로 주면 꼭 매칭되지 않더라도 word를 접두사로 하는 단어가 존재하면 true를 반환한다.
         guard !word.isEmpty else {
             return false
         }
+        
         var currentNode = root
-        for character in word.lowercased() {
+        
+        for character in word {
             guard let childNode = currentNode.children[character] else {
                 return false
             }
@@ -111,7 +110,8 @@ extension Trie {
         // Doesn't check if the node is terminating
         // return the node where the search ended, nil if the search failed.
         var currentNode = root
-        for character in word.lowercased() {
+        
+        for character in word {
             guard let childNode = currentNode.children[character] else {
                 return nil
             }
@@ -134,6 +134,7 @@ extension Trie {
         // Deletes a word from the trie by starting with the last letter and moving back, deleting nodes until either a non-leaf or a terminating node is found.
         var lastNode = terminalNode
         var character = lastNode.value
+        
         while lastNode.isLeaf, let parentNode = lastNode.parentNode {
             lastNode = parentNode
             lastNode.children[character!] = nil
@@ -144,7 +145,7 @@ extension Trie {
         }
     }
 
-    func remove(word: String) {     // O(N)
+    func remove(word: String) {     // O(L)
         // Removes a word from the trie.  If the word is not present or it is empty, just ignore it.  If the last node is a leaf, delete that node and higher nodes that are leaves until a terminating node or non-leaf is found.
         // If the last node of the word has more children, the word is part of other words.
         // Mark the last node as non-terminating.
@@ -152,9 +153,11 @@ extension Trie {
         guard !word.isEmpty else {
             return
         }
+        
         guard let terminalNode = findTerminalNodeOf(word: word) else {
             return
         }
+        
         if terminalNode.isLeaf {
             deleteNodesForWordEndingWith(terminalNode: terminalNode)
         } else {
@@ -168,12 +171,15 @@ extension Trie {
         // partialWord: the letters collected by traversing to this node
         var subtrieWords = [String]()
         var previousLetters = partialWord
+        
         if let value = rootNode.value {
             previousLetters.append(value)
         }
+        
         if rootNode.isTerminating {
             subtrieWords.append(previousLetters)
         }
+        
         for childNode in rootNode.children.values {
             let childWords = wordsInSubtrie(rootNode: childNode, partialWord: previousLetters)
             subtrieWords += childWords
@@ -184,11 +190,13 @@ extension Trie {
     func findWordsWithPrefix(prefix: String) -> [String] {
         // Returns an array of words in a subtrie of the trie that start with given prefix
         var words = [String]()
-        let prefixLowerCased = prefix.lowercased()
+        let prefixLowerCased = prefix
+        
         if let lastNode = findLastNodeOf(word: prefixLowerCased) {
             if lastNode.isTerminating {
                 words.append(prefixLowerCased)
             }
+            
             for childNode in lastNode.children.values {
                 let childWords = wordsInSubtrie(rootNode: childNode, partialWord: prefixLowerCased)
                 words += childWords
