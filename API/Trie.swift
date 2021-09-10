@@ -12,6 +12,7 @@ class TrieNode<T: Hashable> {
     weak var parentNode: TrieNode?      // 부모노드.  부모와 자신이 서로 참조하고 있기 떄문에 강한 참조가 발생할 수 있으므로 weak로 선언
     var children: [T: TrieNode] = [:]   // 이진트리와 다르게 자식 노드가 많을 수 있으므로 사전으로 정의
     var isTerminating = false           // 한 단어의 끝을 표시하는 용도.
+    var count: Int = 0
     
     var isLeaf: Bool {
         return children.count == 0
@@ -65,39 +66,70 @@ extension Trie {
     
     // Inserts a word into the trie.  If the word is already present, there is no change.
     func insert(word: String) {     // O(L)
-        guard !word.isEmpty else {
-            return
-        }
+        guard !word.isEmpty else { return }
         
         var currentNode = root
         
-        for character in word {
-            if let childNode = currentNode.children[character] {
+        for char in word {
+            currentNode.count += 1
+            
+            if let childNode = currentNode.children[char] {
                 currentNode = childNode
             } else {
-                currentNode.add(value: character)
-                currentNode = currentNode.children[character]!
+                currentNode.add(value: char)
+                currentNode = currentNode.children[char]!
             }
         }
         
         // Word already present?
-        guard !currentNode.isTerminating else {
-            return
-        }
+        guard !currentNode.isTerminating else { return }
+        
         wordCount += 1
         currentNode.isTerminating = true
     }
     
-    func contains(word: String, matchPrefix: Bool = false) -> Bool {     // O(L)
-        // Trie에서 word가 존재하는지 찾는다. matchPrefix를 true로 주면 꼭 매칭되지 않더라도 word를 접두사로 하는 단어가 존재하면 true를 반환한다.
-        guard !word.isEmpty else {
-            return false
-        }
+    func childCountWithPrefix(with prefix: String) -> Int {
+        // prefix를 접두사로 하는 문자열의 개수를 구한다.
+        guard !prefix.isEmpty else { return 0 }
         
         var currentNode = root
         
-        for character in word {
-            guard let childNode = currentNode.children[character] else {
+        for char in prefix {
+            guard let childNode = currentNode.children[char] else {
+                return 0
+            }
+            currentNode = childNode
+        }
+        return currentNode.children.count
+    }
+    
+    func childCount(word: String, breakChar: Character = " ") -> Int {
+        // Trie에서 word를 검색한다. 이 때 word의 문자중 breakChar이 존재하면 그 전까지의 문자열을 prefix로 갖는 문자열의 개수를 구한다.
+        // ex: word: "abc??", breakChar: "?" --> Trie에서 "abc"를 접두사로 갖는 문자열의 개수를 리턴.
+        guard !word.isEmpty else { return 0 }
+        
+        var currentNode = root
+        
+        for char in word {
+            if char == breakChar {
+                return currentNode.count
+            }
+            
+            guard let childNode = currentNode.children[char] else { return 0 }
+            
+            currentNode = childNode
+        }
+        return currentNode.children.count
+    }
+    
+    func contains(word: String, matchPrefix: Bool = false) -> Bool {     // O(L)
+        // Trie에서 word가 존재하는지 찾는다. matchPrefix를 true로 주면 꼭 매칭되지 않더라도 word를 접두사로 하는 단어가 존재하면 true를 반환한다.
+        guard !word.isEmpty else { return false }
+        
+        var currentNode = root
+        
+        for char in word {
+            guard let childNode = currentNode.children[char] else {
                 return false
             }
             currentNode = childNode
