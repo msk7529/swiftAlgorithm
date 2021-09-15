@@ -12,7 +12,7 @@ class TrieNode<T: Hashable> {
     weak var parentNode: TrieNode?      // 부모노드.  부모와 자신이 서로 참조하고 있기 떄문에 강한 참조가 발생할 수 있으므로 weak로 선언
     var children: [T: TrieNode] = [:]   // 이진트리와 다르게 자식 노드가 많을 수 있으므로 사전으로 정의
     var isTerminating = false           // 한 단어의 끝을 표시하는 용도.
-    var count: Int = 0
+    var count: Int = 0                  // children.count와 count가 다른점은 전자는 self와 직접연결된 자식노드의 개수를 나타내고, 후자는 self 밑으로 존재하는 단어의 개수를 의미.
     
     var isLeaf: Bool {
         return children.count == 0
@@ -37,7 +37,7 @@ class Trie {
     // 트라이(Prefix tree, digital search tree, retrieval tree)
     typealias Node = TrieNode<Character>
     
-    fileprivate let root: Node
+    let root: Node
     fileprivate var wordCount: Int
     
     // The number of words in the trie
