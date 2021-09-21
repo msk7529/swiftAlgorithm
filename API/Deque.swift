@@ -4,6 +4,11 @@
 //
 //  Created by kakao on 2021/09/21.
 //
+/*
+u -> v 간의 최단거리를 구할 때, 보통 다익스트라 알고리즘을 사용한다. 이는 O(ElogE) 또는 O(ElogV)의 시간복잡도를 가진다.
+그러나 가중치가 0과 1만 있는 그래프에서는 BFS로 O(V+E)의 시간복잡도로 최단거리를 구할 수 있는데 Deque를 이용하면 된다.
+*/
+
 public struct Deque<T> {
     private var array: [T?]
     private var head: Int
