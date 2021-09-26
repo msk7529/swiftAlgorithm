@@ -4,6 +4,7 @@
 //
 //  Created by MinSeop on 2021/09/27.
 //
+/*
 let input = readLine()!.split(separator: " ").map { Int(String($0))! }
 let N = input[0], K = input[1]
 var arr: [Int] = [0] + readLine()!.split(separator: " ").map { Int(String($0))! }
@@ -18,3 +19,4 @@ for i in stride(from: K, through: N, by: 1) {
     result = max(result, prefixSum[i] - prefixSum[i - K])
 }
 print(result)
+*/
