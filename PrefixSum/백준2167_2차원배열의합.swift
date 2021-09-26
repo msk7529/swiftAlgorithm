@@ -41,6 +41,7 @@ for _ in 0..<Int(readLine()!)! {
  
 // 비슷한데 prefixSum을 DP로 구성해서 누적합 구하는 부분을 O(1)에 하는 방법
 
+/*
 let input = readLine()!.split(separator: " ").map { Int(String($0))! }
 let N = input[0], M = input[1]
 var arr: [[Int]] = Array(repeating: [], count: N + 1)
@@ -63,3 +64,4 @@ for _ in 0..<Int(readLine()!)! {
     let i = line[0], j = line[1], x = line[2], y = line[3]
     print(dp[x][y] - dp[x][j - 1] - dp[i - 1][y] + dp[i - 1][j - 1])
 }
+*/
