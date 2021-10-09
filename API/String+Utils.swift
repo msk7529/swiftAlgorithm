@@ -34,4 +34,9 @@ extension String {
         }
         return result
     }
+    
+    func stringToAscii() -> Int {
+        // 문자열의 아스키코드값을 리턴
+        return self.map { $0.asciiValue! }.map { Int($0) }.reduce(0, +)
+    }
 }

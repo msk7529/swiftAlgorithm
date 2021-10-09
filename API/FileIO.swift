@@ -53,4 +53,21 @@ final class FileIO {
 
         return str
     }
+    
+    @inline(__always) func readString() -> Int {
+        // 문자열의 아스키코드 값 반환
+        var str = 0
+        var now = read()
+
+        while now == 10
+            || now == 32 { now = read() } // 공백과 줄바꿈 무시
+
+        while now != 10
+            && now != 32 && now != 0 {
+                str += Int(now)
+                now = read()
+        }
+
+        return str
+    }
 }
