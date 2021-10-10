@@ -46,6 +46,7 @@ public struct Deque<T> {
         array[head] = element
     }
     
+    @discardableResult
     public mutating func dequeue() -> T? {
         guard head < array.count, let element = array[head] else { return nil }
         
