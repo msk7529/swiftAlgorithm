@@ -6,3 +6,5 @@
 //
 
 import Foundation
+
+let aaa = "123"
