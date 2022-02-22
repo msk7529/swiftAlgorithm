@@ -3,6 +3,10 @@
 //  Algorithm
 //
 //  Created by MinSeop on 2022/02/21.
+
+// Two countries
+// https://www.hackerrank.com/x/library/hackerrank/all/questions/604756/try
+
 /*
 func maxStrength(n: Int) -> Int {
     var arr: [Int] = [n]
