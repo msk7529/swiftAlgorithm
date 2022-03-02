@@ -7,6 +7,7 @@
 // Coins and Energy
 // https://www.hackerrank.com/x/library/hackerrank/all/questions/607483/try
 // 전형적인 DP 문제. 2차원 DP배열을 어떻게 정의할지 고민이 필요. n이 최대 1000이므로 1000 * 1000으로 생각할 수 있는데, 이때는 남은 에너지가 1000이상인 경우 index범위를 벗어나게 되므로 배열에 접근하지 않고 코인값을 더해주는 등의 처리가 필요함. 남은 에너지가 0인 경우에 코인값만 더해주고 그대로 종료해야 하는 예외처리로 시간이 꽤 소요되었음
+ // 0-1 KnapSack 문제와 유사한데, 그보다는 난이도가 높은 무제
 
 func getRich(initialEnergy: Int, energy: [Int], coins: [Int]) -> Int {
     var dp: [[Int]] = Array(repeating: Array(repeating: -1, count: energy.count), count: energy.count)

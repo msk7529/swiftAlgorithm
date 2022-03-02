@@ -2,11 +2,5 @@
 //  main.swift
 //  Algorithm
 //
-//  Created by MinSeop on 2022/02/28.
-import Foundation
+//  Created by MinSeop on 2022/03/03.
 
-let date = Date()
-let test = date.addingTimeInterval(300)
-print(date)
-print(test)
-print(test >= date)
