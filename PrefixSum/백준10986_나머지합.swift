@@ -10,7 +10,7 @@
 let input = readLine()!.split(separator: " ").map { Int(String($0))! }
 let N = input[0], M = input[1]
 var arr: [Int] = [0] + readLine()!.split(separator: " ").map { Int(String($0))! % M }
-var cntSum: [Int: Int] = [:]    // cntSum[i]: 현재까지의 누적합이 cnt인 구간의 개수
+var cntSum: [Int: Int] = [:]    // cntSum[i]: 현재까지의 누적합이 i인 구간의 개수
 var totalSum: Int = 0   // 현재까지의 누적합
 var result: Int = 0
 
