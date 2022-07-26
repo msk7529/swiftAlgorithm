@@ -5,7 +5,7 @@
 //  Created by MinSeop on 2021/08/22.
 //
 func KMP(str s: [Character], pattern p: [Character]) -> [Int] {
-    // O(n + m). 불일치가 발생하기 직전까지 같았던 부분은 다시 비교하지 않고 패턴 매칭을 진행.
+    // O(len(s) + len(p)). 불일치가 발생하기 직전까지 같았던 부분은 다시 비교하지 않고 패턴 매칭을 진행.
     var result: [Int] = []
     let pi = getPi(pattern: p)
     var j: Int = 0
@@ -27,7 +27,7 @@ func KMP(str s: [Character], pattern p: [Character]) -> [Int] {
     return result
 }
 
-func getPi(pattern p: [Character]) -> [Int] {  // O(m)
+func getPi(pattern p: [Character]) -> [Int] {  // O(len(p))
     // 부분일치 테이블(pi)을 만든다.
     // pi[i]: pattern[0...i]에서 접두사와 접미사가 같을떄의 최대 길이
     var pi: [Int] = Array(repeating: 0, count: p.count)
