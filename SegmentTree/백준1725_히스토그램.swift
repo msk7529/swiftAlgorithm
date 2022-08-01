@@ -20,17 +20,18 @@ public class SegmentTree<T> {
         self.function = function
 
         if leftBound == rightBound {
+            // left와 right가 일치하면 해당 인덱스 값을 저장한다.
             value = leftBound as! T
         } else {
             let middle = (leftBound + rightBound) / 2
             leftChild = SegmentTree<T>(array: array, leftBound: leftBound, rightBound: middle, function: function)
-            rightChild = SegmentTree<T>(array: array, leftBound: middle+1, rightBound: rightBound, function: function)
+            rightChild = SegmentTree<T>(array: array, leftBound: middle + 1, rightBound: rightBound, function: function)
             value = function(leftChild!.value, rightChild!.value)
         }
     }
 
     public convenience init(array: [T], function: @escaping (T, T) -> T) {  // O(N)
-        self.init(array: array, leftBound: 0, rightBound: array.count-1, function: function)
+        self.init(array: array, leftBound: 0, rightBound: array.count - 1, function: function)
     }
 
     public func query(leftBound: Int, rightBound: Int) -> T {   // O(logN)
@@ -64,7 +65,7 @@ for _ in 0..<N {
     arr.append(Int(readLine()!)!)
 }
 
-let segmentTree: SegmentTree<Int> = .init(array: arr, function: { a, b in arr[a] < arr[b] ? a : b })
+let segmentTree: SegmentTree<Int> = .init(array: arr, function: { a, b in arr[a] < arr[b] ? a : b })    // 높이가 더 작은 배열의 인덱스를 저장
 
 print(devideConquer(left: 0, right: N - 1))
 

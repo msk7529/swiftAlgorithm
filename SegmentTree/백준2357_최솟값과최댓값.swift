@@ -5,21 +5,23 @@
 //  Created by MinSeop on 2021/08/09.
 //
 /*
-let line = readLine()!.split(separator: " ").map { Int(String($0))! }
-let N = line[0], M = line[1]
+import Foundation
+
+let file: FileIO = .init()
+let N = file.readInt(), M = file.readInt()
 var arr: [Int] = Array(repeating: 0, count: N)
 var result: String = ""
 
 for i in 0..<N {
-    arr[i] = Int(readLine()!)!
+    arr[i] = file.readInt()
 }
 
 let minSegmentTree: SegmentTree<Int> = .init(array: arr, function: { a, b in a < b ? a : b })
 let maxSegmentTree: SegmentTree<Int> = .init(array: arr, function: { a, b in a > b ? a : b })
 
 for _ in 0..<M {
-    let query = readLine()!.split(separator: " ").map { Int(String($0))! }
-    result += "\(minSegmentTree.query(leftBound: query[0] - 1, rightBound: query[1] - 1)) \(maxSegmentTree.query(leftBound: query[0] - 1, rightBound: query[1] - 1))\n"
+    let a = file.readInt(), b = file.readInt()
+    result += "\(minSegmentTree.query(leftBound: a - 1, rightBound: b - 1)) \(maxSegmentTree.query(leftBound: a - 1, rightBound: b - 1))\n"
 }
 
 result.removeLast()
