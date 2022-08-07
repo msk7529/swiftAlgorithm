@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C23619B8289D777B00588807 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23619B7289D777B00588807 /* main.swift */; };
 		C23619BC289D77D000588807 /* 임시파일.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23619BB289D77D000588807 /* 임시파일.swift */; };
+		C23619BE28A0322D00588807 /* 반복풀이문제_GameTheory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23619BD28A0322D00588807 /* 반복풀이문제_GameTheory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -501,6 +502,7 @@
 		C23619B6289D771C00588807 /* DoubleStackQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleStackQueue.swift; sourceTree = "<group>"; };
 		C23619B7289D777B00588807 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C23619BB289D77D000588807 /* 임시파일.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "임시파일.swift"; sourceTree = "<group>"; };
+		C23619BD28A0322D00588807 /* 반복풀이문제_GameTheory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "반복풀이문제_GameTheory.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -565,8 +567,8 @@
 				C23617B2289D72D000588807 /* 백준2167_2차원배열의합.swift */,
 				C23617B3289D72D000588807 /* 백준2725_보이는점의개수.swift */,
 				C23617B4289D72D000588807 /* 백준10211_MaximumSubarray.swift */,
-				C23617B5289D72D000588807 /* 반복풀이문제_PrefixSum.swift */,
 				C23617B6289D72D000588807 /* 백준2143_두배열의합.swift */,
+				C23617B5289D72D000588807 /* 반복풀이문제_PrefixSum.swift */,
 			);
 			path = PrefixSum;
 			sourceTree = "<group>";
@@ -575,14 +577,14 @@
 			isa = PBXGroup;
 			children = (
 				C23617B8289D72ED00588807 /* 백준16916_부분문자열.swift */,
-				C23617B9289D72ED00588807 /* 백준16172_나는친구가적다(Large).swift */,
-				C23617BA289D72ED00588807 /* 반복풀이문제_StringSearch.swift */,
 				C23617BB289D72ED00588807 /* 백준1701_Cubeditor.swift */,
 				C23617BC289D72ED00588807 /* 백준14425_문자열집합.swift */,
 				C23617BD289D72ED00588807 /* 백준5052_전화번호목록.swift */,
 				C23617BE289D72ED00588807 /* 백준5670_휴대폰자판.swift */,
 				C23617BF289D72ED00588807 /* 백준14725_개미굴.swift */,
 				C23617C0289D72ED00588807 /* 프로그래머스_가사검색.swift */,
+				C23617B9289D72ED00588807 /* 백준16172_나는친구가적다(Large).swift */,
+				C23617BA289D72ED00588807 /* 반복풀이문제_StringSearch.swift */,
 			);
 			path = StringSearch;
 			sourceTree = "<group>";
@@ -713,6 +715,7 @@
 				C2361837289D76BA00588807 /* 백준9661_돌게임7.swift */,
 				C2361838289D76BA00588807 /* 백준9660_돌게임6.swift */,
 				C2361839289D76BA00588807 /* 백준11867_박스나누기게임.swift */,
+				C23619BD28A0322D00588807 /* 반복풀이문제_GameTheory.swift */,
 			);
 			path = GameTheory;
 			sourceTree = "<group>";
@@ -728,8 +731,8 @@
 		C2361832289D76BA00588807 /* Sprague-Grundy */ = {
 			isa = PBXGroup;
 			children = (
-				C2361833289D76BA00588807 /* 백준11868_님게임2.swift */,
 				C2361834289D76BA00588807 /* 백준11694_님게임.swift */,
+				C2361833289D76BA00588807 /* 백준11868_님게임2.swift */,
 			);
 			path = "Sprague-Grundy";
 			sourceTree = "<group>";
@@ -1280,6 +1283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C23619B8289D777B00588807 /* main.swift in Sources */,
+				C23619BE28A0322D00588807 /* 반복풀이문제_GameTheory.swift in Sources */,
 				C23619BC289D77D000588807 /* 임시파일.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

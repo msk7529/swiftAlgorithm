@@ -5,6 +5,10 @@
 //  Created by MinSeop on 2021/10/04.
 //
 /*
+ MinMax 알고리즘: 나를 기준으로 보고 상대의 점수가 min이 되도록 선택
+ */
+
+/*
 var arr: [Int] = []
 var dp: [[Int]] = []    // dp[i][j]: i~j까지 카드가 있을 때 근우가 얻을 수 있는 최대 점수
 var resultString = ""
