@@ -62,6 +62,7 @@ public struct Deque<T> {
         return element
     }
     
+    @discardableResult
     public mutating func dequeueBack() -> T? {
         if isEmpty {
             return nil

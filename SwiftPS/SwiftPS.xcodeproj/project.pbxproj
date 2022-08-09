@@ -40,6 +40,7 @@
 		C2361A3028A2DA0100588807 /* DoubleStackQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23619B6289D771C00588807 /* DoubleStackQueue.swift */; };
 		C2361A3228A2DCF900588807 /* 백준11000_강의실배정_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A3128A2DCF900588807 /* 백준11000_강의실배정_1.swift */; };
 		C2361A3328A2E11D00588807 /* 백준20004_베스킨라빈스31.swift in Sources */ = {isa = PBXBuildFile; fileRef = C236182E289D76BA00588807 /* 백준20004_베스킨라빈스31.swift */; };
+		C2361A3528A2EF7E00588807 /* 백준2812_크게만들기_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A3428A2EF7E00588807 /* 백준2812_크게만들기_1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -534,6 +535,7 @@
 		C23619BB289D77D000588807 /* 임시파일.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "임시파일.swift"; sourceTree = "<group>"; };
 		C23619BD28A0322D00588807 /* 반복풀이문제_GameTheory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "반복풀이문제_GameTheory.swift"; sourceTree = "<group>"; };
 		C2361A3128A2DCF900588807 /* 백준11000_강의실배정_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "백준11000_강의실배정_1.swift"; sourceTree = "<group>"; };
+		C2361A3428A2EF7E00588807 /* 백준2812_크게만들기_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "백준2812_크게만들기_1.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1209,6 +1211,7 @@
 		C2361992289D770D00588807 /* ReSolve */ = {
 			isa = PBXGroup;
 			children = (
+				C2361A3428A2EF7E00588807 /* 백준2812_크게만들기_1.swift */,
 				C2361A3128A2DCF900588807 /* 백준11000_강의실배정_1.swift */,
 				C2361995289D770D00588807 /* 백준1700_멀티탭스케줄링_1.swift */,
 				C2361993289D770D00588807 /* 백준16172_나는친구가적다(Large)_1.swift */,
@@ -1316,6 +1319,7 @@
 			files = (
 				C2361A2428A2D9DC00588807 /* Permutaion_Combination.swift in Sources */,
 				C2361A1A28A2D9C300588807 /* Kruskal.swift in Sources */,
+				C2361A3528A2EF7E00588807 /* 백준2812_크게만들기_1.swift in Sources */,
 				C2361A1E28A2D9CC00588807 /* InversionCountingWithMergeSort.swift in Sources */,
 				C23619B8289D777B00588807 /* main.swift in Sources */,
 				C2361A2228A2D9D700588807 /* Deque.swift in Sources */,
