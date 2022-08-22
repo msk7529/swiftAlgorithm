@@ -42,6 +42,7 @@
 		C2361A3328A2E11D00588807 /* 백준20004_베스킨라빈스31.swift in Sources */ = {isa = PBXBuildFile; fileRef = C236182E289D76BA00588807 /* 백준20004_베스킨라빈스31.swift */; };
 		C2361A3528A2EF7E00588807 /* 백준2812_크게만들기_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A3428A2EF7E00588807 /* 백준2812_크게만들기_1.swift */; };
 		C2361A5728B4029000588807 /* 해커랭크_MaximizeArrayValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A5628B4029000588807 /* 해커랭크_MaximizeArrayValue.swift */; };
+		C2361A5928B4074200588807 /* 해커랭크_RestockingTheWarehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A5828B4074200588807 /* 해커랭크_RestockingTheWarehouse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -538,6 +539,7 @@
 		C2361A3128A2DCF900588807 /* 백준11000_강의실배정_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "백준11000_강의실배정_1.swift"; sourceTree = "<group>"; };
 		C2361A3428A2EF7E00588807 /* 백준2812_크게만들기_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "백준2812_크게만들기_1.swift"; sourceTree = "<group>"; };
 		C2361A5628B4029000588807 /* 해커랭크_MaximizeArrayValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "해커랭크_MaximizeArrayValue.swift"; sourceTree = "<group>"; };
+		C2361A5828B4074200588807 /* 해커랭크_RestockingTheWarehouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "해커랭크_RestockingTheWarehouse.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1051,6 +1053,7 @@
 		C23618F5289D76FE00588807 /* Implement */ = {
 			isa = PBXGroup;
 			children = (
+				C2361A5828B4074200588807 /* 해커랭크_RestockingTheWarehouse.swift */,
 				C23618F6289D76FE00588807 /* 백준1267_핸드폰요금.swift */,
 				C23618F7289D76FE00588807 /* 백준1302_베스트셀러.swift */,
 				C23618F8289D76FE00588807 /* 백준2161_카드1.swift */,
@@ -1354,6 +1357,7 @@
 				C2361A1828A2D9BF00588807 /* Dijkstra.swift in Sources */,
 				C2361A2B28A2D9F300588807 /* SegmentTree.swift in Sources */,
 				C2361A1628A2D9BA00588807 /* GetPrimeList.swift in Sources */,
+				C2361A5928B4074200588807 /* 해커랭크_RestockingTheWarehouse.swift in Sources */,
 				C2361A2528A2D9DE00588807 /* PowDevideAndConquer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
