@@ -41,6 +41,7 @@
 		C2361A3228A2DCF900588807 /* 백준11000_강의실배정_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A3128A2DCF900588807 /* 백준11000_강의실배정_1.swift */; };
 		C2361A3328A2E11D00588807 /* 백준20004_베스킨라빈스31.swift in Sources */ = {isa = PBXBuildFile; fileRef = C236182E289D76BA00588807 /* 백준20004_베스킨라빈스31.swift */; };
 		C2361A3528A2EF7E00588807 /* 백준2812_크게만들기_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A3428A2EF7E00588807 /* 백준2812_크게만들기_1.swift */; };
+		C2361A5728B4029000588807 /* 해커랭크_MaximizeArrayValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A5628B4029000588807 /* 해커랭크_MaximizeArrayValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -536,6 +537,7 @@
 		C23619BD28A0322D00588807 /* 반복풀이문제_GameTheory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "반복풀이문제_GameTheory.swift"; sourceTree = "<group>"; };
 		C2361A3128A2DCF900588807 /* 백준11000_강의실배정_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "백준11000_강의실배정_1.swift"; sourceTree = "<group>"; };
 		C2361A3428A2EF7E00588807 /* 백준2812_크게만들기_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "백준2812_크게만들기_1.swift"; sourceTree = "<group>"; };
+		C2361A5628B4029000588807 /* 해커랭크_MaximizeArrayValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "해커랭크_MaximizeArrayValue.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -591,6 +593,7 @@
 		C23617AB289D72D000588807 /* PrefixSum */ = {
 			isa = PBXGroup;
 			children = (
+				C2361A5628B4029000588807 /* 해커랭크_MaximizeArrayValue.swift */,
 				C23617AD289D72D000588807 /* 백준2632_피자판매.swift */,
 				C23617B3289D72D000588807 /* 백준2725_보이는점의개수.swift */,
 				C23617AE289D72D000588807 /* 백준10986_나머지합.swift */,
@@ -1335,6 +1338,7 @@
 				C23619BE28A0322D00588807 /* 반복풀이문제_GameTheory.swift in Sources */,
 				C23619BC289D77D000588807 /* 임시파일.swift in Sources */,
 				C2361A2728A2D9E800588807 /* CirCle_IntersectionPoints.swift in Sources */,
+				C2361A5728B4029000588807 /* 해커랭크_MaximizeArrayValue.swift in Sources */,
 				C2361A2A28A2D9F000588807 /* Queue.swift in Sources */,
 				C2361A2128A2D9D400588807 /* RotateArray.swift in Sources */,
 				C2361A2628A2D9E200588807 /* SegmentTreeUsingArray.swift in Sources */,
