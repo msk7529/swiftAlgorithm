@@ -44,6 +44,7 @@
 		C2361A5728B4029000588807 /* 해커랭크_MaximizeArrayValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A5628B4029000588807 /* 해커랭크_MaximizeArrayValue.swift */; };
 		C2361A5928B4074200588807 /* 해커랭크_RestockingTheWarehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A5828B4074200588807 /* 해커랭크_RestockingTheWarehouse.swift */; };
 		C2361A5B28B40B4200588807 /* 해커랭크_TwoOperationsRedux.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A5A28B40B4200588807 /* 해커랭크_TwoOperationsRedux.swift */; };
+		C7DDC71A292E7D030050A863 /* 해커랭크_AssignedParking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DDC719292E7D030050A863 /* 해커랭크_AssignedParking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -542,6 +543,7 @@
 		C2361A5628B4029000588807 /* 해커랭크_MaximizeArrayValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "해커랭크_MaximizeArrayValue.swift"; sourceTree = "<group>"; };
 		C2361A5828B4074200588807 /* 해커랭크_RestockingTheWarehouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "해커랭크_RestockingTheWarehouse.swift"; sourceTree = "<group>"; };
 		C2361A5A28B40B4200588807 /* 해커랭크_TwoOperationsRedux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "해커랭크_TwoOperationsRedux.swift"; sourceTree = "<group>"; };
+		C7DDC719292E7D030050A863 /* 해커랭크_AssignedParking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "해커랭크_AssignedParking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -632,6 +634,7 @@
 		C23617D9289D73BC00588807 /* Greedy */ = {
 			isa = PBXGroup;
 			children = (
+				C7DDC719292E7D030050A863 /* 해커랭크_AssignedParking.swift */,
 				C23617F0289D73BC00588807 /* 해커랭크_AutomobileSpareParts.swift */,
 				C23617DB289D73BC00588807 /* 백준2810_컵홀더.swift */,
 				C23617EF289D73BC00588807 /* 백준2812_크게만들기.swift */,
@@ -1354,6 +1357,7 @@
 				C2361A3228A2DCF900588807 /* 백준11000_강의실배정_1.swift in Sources */,
 				C2361A2028A2D9D100588807 /* KMP.swift in Sources */,
 				C2361A2828A2D9EA00588807 /* TopologySort.swift in Sources */,
+				C7DDC71A292E7D030050A863 /* 해커랭크_AssignedParking.swift in Sources */,
 				C2361A2D28A2D9F800588807 /* 2DFenwickTree.swift in Sources */,
 				C2361A3028A2DA0100588807 /* DoubleStackQueue.swift in Sources */,
 				C2361A2E28A2D9FB00588807 /* String+Utils.swift in Sources */,
