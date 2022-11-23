@@ -45,6 +45,7 @@
 		C2361A5928B4074200588807 /* 해커랭크_RestockingTheWarehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A5828B4074200588807 /* 해커랭크_RestockingTheWarehouse.swift */; };
 		C2361A5B28B40B4200588807 /* 해커랭크_TwoOperationsRedux.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A5A28B40B4200588807 /* 해커랭크_TwoOperationsRedux.swift */; };
 		C7DDC71A292E7D030050A863 /* 해커랭크_AssignedParking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DDC719292E7D030050A863 /* 해커랭크_AssignedParking.swift */; };
+		C7DDC71C292E84520050A863 /* 해커랭크_BackspaceStringCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DDC71B292E84520050A863 /* 해커랭크_BackspaceStringCompare.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -544,6 +545,7 @@
 		C2361A5828B4074200588807 /* 해커랭크_RestockingTheWarehouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "해커랭크_RestockingTheWarehouse.swift"; sourceTree = "<group>"; };
 		C2361A5A28B40B4200588807 /* 해커랭크_TwoOperationsRedux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "해커랭크_TwoOperationsRedux.swift"; sourceTree = "<group>"; };
 		C7DDC719292E7D030050A863 /* 해커랭크_AssignedParking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "해커랭크_AssignedParking.swift"; sourceTree = "<group>"; };
+		C7DDC71B292E84520050A863 /* 해커랭크_BackspaceStringCompare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "해커랭크_BackspaceStringCompare.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1059,6 +1061,7 @@
 			isa = PBXGroup;
 			children = (
 				C2361A5A28B40B4200588807 /* 해커랭크_TwoOperationsRedux.swift */,
+				C7DDC71B292E84520050A863 /* 해커랭크_BackspaceStringCompare.swift */,
 				C2361A5828B4074200588807 /* 해커랭크_RestockingTheWarehouse.swift */,
 				C23618F6289D76FE00588807 /* 백준1267_핸드폰요금.swift */,
 				C23618F7289D76FE00588807 /* 백준1302_베스트셀러.swift */,
@@ -1349,6 +1352,7 @@
 				C2361A2728A2D9E800588807 /* CirCle_IntersectionPoints.swift in Sources */,
 				C2361A5728B4029000588807 /* 해커랭크_MaximizeArrayValue.swift in Sources */,
 				C2361A2A28A2D9F000588807 /* Queue.swift in Sources */,
+				C7DDC71C292E84520050A863 /* 해커랭크_BackspaceStringCompare.swift in Sources */,
 				C2361A2128A2D9D400588807 /* RotateArray.swift in Sources */,
 				C2361A2628A2D9E200588807 /* SegmentTreeUsingArray.swift in Sources */,
 				C2361A1F28A2D9CE00588807 /* Floyd-Warshall.swift in Sources */,
